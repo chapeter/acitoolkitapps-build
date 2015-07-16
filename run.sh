@@ -26,16 +26,16 @@ sleep 20
 echo "********************"
 echo "*  Launching App   *"
 echo "********************"
-sudo docker run -d --link db:db --name app chapeter/app /opt/acitoolkit/applications/endpointtracker/aci-endpoint-tracker.py -u https://$APIC_IP -l $APIC_USERNAME -p $APIC_PASSWORD -i db -a root -s ''
+sudo docker run -d --link db:db --name app chapeter/app /opt/acitoolkit/applications/endpointtracker/aci-endpoint-tracker.py -u https://$APIC_IP -l $APIC_USERNAME -p $APIC_PASSWORD -i chapeter/db -a root -s ''
 # launch presentation nodes
 echo "********************"
 echo "*  Launching Viz   *"
 echo "********************"
-sudo docker run -d -p 5001:5001 --link db:db --name viz chapeter/viz
+sudo docker run -d -p 5001:5001 --link chapeter/db:chapeter/db --name viz chapeter/viz
 echo "********************"
 echo "*  Launching Web   *"
 echo "********************"
-sudo docker run -d -p 5000:5000 --link db:db --name web chapeter/web
+sudo docker run -d -p 5000:5000 --link chapeter/db:chapeter/db --name web chapeter/web
 echo "********************"
 echo "*Launching Snapback*"
 echo "********************"
