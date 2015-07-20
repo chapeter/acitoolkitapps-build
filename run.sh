@@ -1,8 +1,8 @@
 #!/bin/bash
 
-APIC_IP=10.94.238.68
-APIC_USERNAME=admin
-APIC_PASSWORD=cisco123
+APIC_IP=
+APIC_USERNAME=
+APIC_PASSWORD=
 
 #build the required nodes
 #echo "building Snapback container"

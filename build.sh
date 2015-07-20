@@ -13,7 +13,8 @@ echo "Building Web Container"
 sudo docker build --no-cache -t chapeter/web web
 echo "Building Viz Container"
 sudo docker build --no-cache -t chapeter/viz viz
-
+echo "build confexplorer"
+sudo docker build --no-cache -t chapeter/confexplorer confexplorer
 #Upload containers to docker hub
 echo "Uploading snapback"
 sudo docker push chapeter/snapback
@@ -29,3 +30,9 @@ sudo docker push chapeter/web
 sleep 1
 echo "Uploading viz"
 sudo docker push chapeter/viz
+sleep 1
+echo "upload confexplorer"
+sudo docker push chapeter/confexplorer
+sleep 1
+echo "upload base"
+sudo docker push chapeter/base
