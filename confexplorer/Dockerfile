@@ -10,5 +10,5 @@ RUN git clone https://github.com/datacenter/acitoolkit
 WORKDIR acitoolkit
 RUN python setup.py install
 WORKDIR /opt
-RUN git clone https://github.com/chapeter/confexplorer
+RUN git clone https://github.com/amney/confexplorer
 EXPOSE 5004
