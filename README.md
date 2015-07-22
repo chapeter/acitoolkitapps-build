@@ -1,14 +1,8 @@
-Endpoint Tracker Apps
+ACI Toolkit demo apps BUILD
 ====================
 
-Docker files for building an acitoolkit endpoint tracker applications
-This creates images for four services
-
-* MySQL Database
-* Application - https://github.com/datacenter/acitoolkit/blob/master/applications/endpointtracker/aci-endpoint-tracker.py
-* Visualizations using d3js - https://github.com/datacenter/acitoolkit/blob/master/applications/visualizations/acitoolkit-visualizations.py
-* GUI - https://github.com/datacenter/acitoolkit/blob/master/applications/endpointtracker/aci-endpoint-tracker-gui.py
- 
+This builds the docker images to run man acitoolkit applications and others.  This is just used for the automated build process.  Please use:
+http://github.com/chapeter/acitoolkitapps
 
 
 
@@ -18,27 +12,3 @@ This creates images for four services
 Required
 
 * Docker
-
-
-## Downloading
-
-Clone the repository
-
-     git clone https://github.com/kecorbin/endpointtracker.git 
-
-
-# Usage
-
-Modify setup.sh with the appropriate values for 
-
-     APIC_IP=10.10.10.10
-     APIC_USERNAME=admin
-     APIC_PASSWORD=password
-
-Run setup.sh
-
-     chmod +x setup.sh
-     ./setup.sh
-
-
-Check out the pages at http://127.0.0.1:5000 and http://127.0.0.1:5001
