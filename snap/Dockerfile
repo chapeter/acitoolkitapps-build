@@ -2,6 +2,7 @@
 FROM chapeter/base
 MAINTAINER Kevin Corbin, kecorbin@cisco.com
 RUN apt-get -y install python-tk
+RUN apt-get -y install python paramiko
 RUN pip install werkzeug
 RUN pip install requests
 WORKDIR /opt/acitoolkit/applications/snapback/
